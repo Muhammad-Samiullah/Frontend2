@@ -837,6 +837,11 @@ p{
     }
 }
 
+.reviewer-details {
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
 @media (max-width: 580px) {
     .top-main-links {
         flex-direction: column;

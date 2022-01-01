@@ -4,19 +4,22 @@ const navResponsive =document.querySelector('.nav-responsive');
 const toggleLinks = document.querySelectorAll('.toggle-links div');
 function hideAllAnswers() {
     faqQuestionAnswer.forEach(answer => answer.style.display = "none");
-    faqIcons.foreach(faqIcon => {
+    faqIcons.forEach(faqIcon => {
         faqIcon.innerHTML = '<i class="fas fa-plus"></i>';
     });
 }
+hideAllAnswers();
 function showAnswer(index) {
     if(faqQuestionAnswer[index].style.display == "none") {
         hideAllAnswers();
         faqIcons[index].innerHTML = '<i class="fas fa-minus"></i>';
-        faqQuestionAnswer[index].style.display == "block";
+        faqIcons[index].style.marginTop = '-60px';
+        faqQuestionAnswer[index].style.display = "block";
     }
     else {
         faqIcons[index].innerHTML = '<i class="fas fa-plus"></i>';
-        faqQuestionAnswer[index].style.display == "none";
+        faqIcons[index].style.marginTop = '0px';
+        faqQuestionAnswer[index].style.display = "none";
     }
 }
 function changeNav() {
